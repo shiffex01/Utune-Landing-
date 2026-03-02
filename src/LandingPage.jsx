@@ -11,7 +11,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { MdOutlineFileUpload, MdVerified, MdCampaign } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
-import Navbar from "./NavBar";
+import Navbar from "./Navbar";
 
 
 const LandingPage = () => {
@@ -45,7 +45,7 @@ const LandingPage = () => {
                     U-Tune lets you control what your callers hear while they wait. Upload custom Ring Back Tunes (RBT) - from business ads to personal messages - and transform every incoming call into a branding opportunity.
                   </p>
                 </div>
-                <div className="flex gap-4 text-white">
+                <div className="flex md:flex-row flex-col gap-4 text-white">
                   <button className="flex justify-center items-center gap-2 bg-black px-6 py-3 rounded-lg hover:opacity-90">
                     <div className="flex gap-2 items-center justify-center">  
                       <FaApple className="text-2xl md:text-4xl"/> 
