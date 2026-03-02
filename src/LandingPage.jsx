@@ -338,7 +338,7 @@ const LandingPage = () => {
         </section>
 
         {/* ================= CTA ================= */}
-        <section className="bg-gradient-to-r from-blue-600 max-w-3xl max-auto to-pink-500 text-white py-16 text-center">
+        <section className="bg-gradient-to-r from-blue-600 to-pink-500 text-white py-16 text-center">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">
               Ready to Transform Your Brand Identity?
