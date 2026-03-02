@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./LandingPage";
 import Features from "./Features";
-import Navbar from "./NavBar";
+import Navbar from "./Navbar";
 import Usage from "./Usage";
 import Review from "./Review";
 import LegalPage from "./LegalPage";
