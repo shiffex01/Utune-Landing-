@@ -37,7 +37,7 @@ const HelpCenter = () => {
 
         {/* Header */}
         <div className="text-center mb-14">
-          <h1 className="text-4xl font-extrabold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+          <h1 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-blue-900 to-pink-800 bg-clip-text text-transparent">
             Help Center
           </h1>
           <p className="text-gray-500 mt-4">
