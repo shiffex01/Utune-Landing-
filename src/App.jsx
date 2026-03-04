@@ -7,10 +7,12 @@ import Review from "./Review";
 import LegalPage from "./LegalPage";
 import About from "./About";
 import HelpCenter from "./HelpCenter";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <Navbar/>
       <Routes>
         <Route path="/" element={<LandingPage />}/>\
