@@ -6,6 +6,7 @@ import Usage from "./Usage";
 import Review from "./Review";
 import LegalPage from "./LegalPage";
 import About from "./About";
+import HelpCenter from "./HelpCenter";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/privacy" element={<LegalPage type="privacy" />} />
         <Route path="/terms" element={<LegalPage type="terms" />} />
         <Route path="/about" element={<About/>} />
+        <Route path="/help" element={<HelpCenter/>} />
       </Routes>
     </Router>
   );
