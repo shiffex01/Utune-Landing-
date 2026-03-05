@@ -56,12 +56,13 @@ const Navbar = () => {
               Admin
             </a>
 
-            <Link
-              to="/signup"
+            <a
+              href=""
+              target="_blank"
               className="text-white bg-gradient-to-r font-bold from-blue-600 to-pink-500 p-3 rounded-full"
             >
               Download Now
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -95,18 +96,19 @@ const Navbar = () => {
             href="https://admin.utune.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-md font-semibold text-gray-800 hover:text-purple-600"
+            className="text-md font-semibold text-gray-800"
           >
             Admin
           </a>
 
-          <Link
-            to="/signup"
+          <a
+            href=""
+            target="_blank"
             onClick={() => setIsOpen(false)}
             className="block bg-purple-600 mt-3 text-white px-5 py-2 rounded-lg text-center"
           >
             Get Started
-          </Link>
+          </a>
         </div>
       )}
     </nav>
