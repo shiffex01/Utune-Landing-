@@ -47,6 +47,15 @@ const Navbar = () => {
               </Link>
             ))}
 
+            <a
+              href="https://admin.utune.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-md font-semibold text-gray-800 hover:bg-gray-100 transition"
+            >
+              Admin
+            </a>
+
             <Link
               to="/signup"
               className="text-white bg-gradient-to-r font-bold from-blue-600 to-pink-500 p-3 rounded-full"
@@ -75,17 +84,26 @@ const Navbar = () => {
               className={`block font-medium ${
                 location.pathname === item.path
                   ? "text-purple-600" // active link
-                  : "text-gray-800 hover:text-purple-600" // inactive
+                  : "text-gray-800 hover:text-purple-600 " // inactive
               }`}
             >
               {item.name}
             </Link>
           ))}
 
+          <a
+            href="https://admin.utune.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-md font-semibold text-gray-800 hover:text-purple-600"
+          >
+            Admin
+          </a>
+
           <Link
             to="/signup"
             onClick={() => setIsOpen(false)}
-            className="block bg-purple-600 text-white px-5 py-2 rounded-lg text-center"
+            className="block bg-purple-600 mt-3 text-white px-5 py-2 rounded-lg text-center"
           >
             Get Started
           </Link>
