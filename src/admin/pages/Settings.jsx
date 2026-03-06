@@ -6,7 +6,16 @@ const Toggle = ({ checked, onChange }) => (
       <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:bg-blue-600 transition-colors"></div>
       <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full peer-checked:translate-x-5 transition-transform"></span>
     </label>
-  );
+);
+
+const Settings = () => {
+  const [pushNotifications, setPushNotifications] = useState(true);
+  const [weeklyReports, setWeeklyReports] = useState(false);
+  const [emailAlerts, setEmailAlerts] = useState(true);
+  const [autoApprove, setAutoApprove] = useState(false);
+  const [maxContacts, setMaxContacts] = useState(100);
+
+  const handleAutoApproveToggle = () => setAutoApprove(!autoApprove);
 
   return (
     <div className="flex-1 space-y-6">
