@@ -1,0 +1,30 @@
+export const analyticsData = {
+  summary: {
+    totalUsers: 12850,
+    newUsers: 620,
+    activeUsers: 10430,
+    inactiveUsers: 1980,
+    bannedUsers: 440,
+    dailyActiveUsers: 3420,
+  },
+  monthlyStats: [
+    { month: "Jan", total: 1000, new: 200, active: 800, inactive: 150, banned: 50, dau: 400 },
+    { month: "Feb", total: 1500, new: 500, active: 1200, inactive: 200, banned: 100, dau: 600 },
+    { month: "Mar", total: 2200, new: 700, active: 1700, inactive: 350, banned: 150, dau: 900 },
+    { month: "Apr", total: 3000, new: 800, active: 2400, inactive: 450, banned: 150, dau: 1100 },
+    { month: "May", total: 3900, new: 900, active: 3200, inactive: 500, banned: 200, dau: 1400 },
+    { month: "Jun", total: 5000, new: 1100, active: 4100, inactive: 650, banned: 250, dau: 1700 },
+    { month: "Jul", total: 6200, new: 1200, active: 5100, inactive: 800, banned: 300, dau: 2000 },
+    { month: "Aug", total: 7100, new: 900, active: 5900, inactive: 950, banned: 250, dau: 2500 },
+    { month: "Sep", total: 8200, new: 1400, active: 6900, inactive: 1050, banned: 250, dau: 2800 },
+    { month: "Oct", total: 9600, new: 1400, active: 8100, inactive: 1200, banned: 300, dau: 3100 },
+    { month: "Nov", total: 11200, new: 1600, active: 9400, inactive: 1450, banned: 350, dau: 3300 },
+    { month: "Dec", total: 12850, new: 1650, active: 10430, inactive: 1980, banned: 440, dau: 3420 },
+  ],
+  weeklyStats: [
+    { day: "Week 1", total: 200, new: 50, active: 160, inactive: 30, banned: 10, dau: 80 },
+    { day: "Week 2", total: 320, new: 120, active: 260, inactive: 45, banned: 15, dau: 130 },
+    { day: "Week 3", total: 450, new: 130, active: 370, inactive: 60, banned: 20, dau: 180 },
+    { day: "Week 4", total: 620, new: 170, active: 510, inactive: 80, banned: 30, dau: 250 },
+  ],
+};

@@ -1,0 +1,56 @@
+import Sidebar from "../components/Sidebar";
+import { Outlet, useLocation } from "react-router-dom";
+import { FiMenu } from "react-icons/fi";
+import { useState } from "react";
+
+const pageTitles = {
+  "/admin": ["Dashboard", "Analytics and user overview"],
+  "/admin/users": ["Users", "Manage user accounts by phone number"],
+  "/admin/analytics": ["Analytics", "User statistics and growth metrics"],
+  "/admin/requests": ["Tune Activation Requests", "Approve or decline user tune activation requests"],
+  "/admin/settings": ["Settings", "Configure platform settings"],
+};
+
+const AdminLayout = () => {
+  const location = useLocation();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const currentTitle = pageTitles[location.pathname] || ["Page", ""];
+
+  return (
+    <div className="flex bg-gray-100 min-h-screen relative">
+      {/* Sidebar */}
+      <Sidebar
+        className={`fixed top-0 left-0 h-screen z-30 transform transition-transform duration-300 ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } md:translate-x-0`}
+        closeSidebar={() => setIsSidebarOpen(false)}
+      />
+
+      {/* Mobile overlay */}
+      {isSidebarOpen && (
+        <div className="fixed inset-0 bg-black/40 z-20 md:hidden" onClick={() => setIsSidebarOpen(false)} />
+      )}
+
+      {/* Main content */}
+      <div className="flex-1 flex flex-col ml-0 md:ml-64">
+        {/* Top header */}
+        <div className="bg-white shadow-md flex justify-between items-center px-4 md:px-8 py-4 sticky top-0 z-10 w-full">
+          <div className="flex flex-col gap-1">
+            <h1 className="md:text-3xl text-2xl font-bold">{currentTitle[0]}</h1>
+            <p className="md:text-base text-sm text-gray-600">{currentTitle[1]}</p>
+          </div>
+          <button className="md:hidden text-3xl" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+            <FiMenu />
+          </button>
+        </div>
+
+        {/* Page content */}
+        <div className="flex-1 p-4 sm:p-6 md:p-8 overflow-y-auto">
+          <Outlet />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AdminLayout;
