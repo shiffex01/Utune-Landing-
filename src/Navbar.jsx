@@ -47,14 +47,12 @@ const Navbar = () => {
               </Link>
             ))}
 
-            <a
-              href="https://admin.utune.com"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/admin/login"
               className="text-md font-semibold text-gray-800 hover:bg-gray-100 transition"
             >
               Admin
-            </a>
+            </Link>
 
             <a
               href=""
@@ -92,14 +90,12 @@ const Navbar = () => {
             </Link>
           ))}
 
-          <a
-            href="https://admin.utune.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/admin/login"
             className="text-md font-semibold text-gray-800"
           >
             Admin
-          </a>
+          </Link>
 
           <a
             href=""
