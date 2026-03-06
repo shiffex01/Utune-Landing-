@@ -47,12 +47,14 @@ const Navbar = () => {
               </Link>
             ))}
 
-            <Link
-              to="/admin/login"
+            <a
+              href="https://utune.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-md font-semibold text-gray-800 hover:bg-gray-100 transition"
             >
               Admin
-            </Link>
+            </a>
 
             <a
               href=""
@@ -90,12 +92,14 @@ const Navbar = () => {
             </Link>
           ))}
 
-          <Link
-            to="/admin/login"
+          <a
+            href="https://utune.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-md font-semibold text-gray-800"
           >
             Admin
-          </Link>
+          </a>
 
           <a
             href=""
