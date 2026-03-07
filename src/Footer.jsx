@@ -51,7 +51,15 @@ const Footer = () => {
         </div>
       </div>
 
-      <p className="text-center text-xs mt-8">© 2026 U-Tune. All rights reserved.</p>
+      <div className="text-center text-xs mt-8 space-x-2">
+        <span>© 2026 U-Tune. All rights reserved.</span>
+        <Link
+          to="/admins/login"
+          className="opacity-40 hover:opacity-100 text-gray-500 hover:text-white"
+        >
+          Admins
+        </Link>
+      </div>
     </footer>
   );
 };

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const VerifyPage = () => {
   const navigate = useNavigate();
-  const [code, setCode] = useState(["", "", "", ""]);
+  const [code, setCode] = useState(["", "", "", "", "", ""]);
   const [error, setError] = useState(false);
   const inputsRef = useRef([]);
   const [isMobile, setIsMobile] = useState(false);
@@ -22,7 +22,7 @@ const VerifyPage = () => {
     newCode[index] = value;
     setCode(newCode);
     setError(false);
-    if (value && index < 3) inputsRef.current[index + 1].focus();
+    if (value && index < 5) inputsRef.current[index + 1].focus();
   };
 
   const handleKeyDown = (e, index) => {
@@ -31,16 +31,20 @@ const VerifyPage = () => {
 
   const handleVerify = () => {
     const enteredCode = code.join("");
-    if (enteredCode === "1234") {
+    if (enteredCode === "123456") {
       localStorage.setItem("adminAuth", "true");
       navigate("/admin");
     } else {
       setError(true);
     }
+    if (enteredCode.length !== 6) {
+      setError(true);
+      return;
+    }
   };
 
   const verifyCard = (
-    <div className="bg-white/95 backdrop-blur-md w-full max-w-md p-6 sm:p-8 rounded-2xl shadow-2xl mx-auto animate-slideUp text-center">
+    <div className="bg-white/95 backdrop-blur-md w-full max-w-lg p-6 sm:p-8 rounded-2xl shadow-2xl mx-auto animate-slideUp text-center">
       <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6">Enter Code</h2>
       <div className="flex justify-between mb-4">
         {code.map((digit, index) => (
@@ -55,7 +59,7 @@ const VerifyPage = () => {
           />
         ))}
       </div>
-      {error && <p className="text-red-500 text-sm mb-4">Invalid code, please try again. Use 1234 as test code.</p>}
+      {error && <p className="text-red-500 text-sm mb-4">Invalid code, please try again. Use 123456 as test code.</p>}
       <button
         onClick={handleVerify}
         className="w-full bg-gradient-to-r from-blue-600 to-pink-500 text-white py-2 sm:py-3 rounded-lg font-semibold hover:opacity-90 transition"
