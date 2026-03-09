@@ -48,7 +48,7 @@ const Navbar = () => {
             ))}
 
             <a
-              href="https://utune.vercel.app"
+              href="https://utune-1.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className="text-md font-semibold text-gray-800 hover:bg-gray-100 transition"
@@ -93,7 +93,7 @@ const Navbar = () => {
           ))}
 
           <a
-            href="https://utune.vercel.app"
+            href="https://utune-1.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="text-md font-semibold text-gray-800"
